@@ -7,6 +7,7 @@ var SearchView = Backbone.View.extend({
       event.preventDefault();
       var text = $('.form-control').val();
       console.log(text)
+      this.collection.search(text)
     })
   },
 
