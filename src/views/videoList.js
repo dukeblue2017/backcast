@@ -11,7 +11,7 @@ var VideoListView = Backbone.View.extend({
     this.$el.children().detach();
 
     this.$el.html(this.template());
-    console.log("collection: ",this.collection);
+    // console.log("collection: ",this.collection);
     this.collection.forEach((video) => {
       // console.log("Video",video);
       //Make a new VideoListEntryView
