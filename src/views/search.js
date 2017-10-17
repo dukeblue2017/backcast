@@ -4,11 +4,9 @@ var SearchView = Backbone.View.extend({
   initialize: function() {
     this.render();
     $('.btn').click( function( event ) {
+      event.preventDefault();
       var text = $('.form-control').val();
       console.log(text)
-    })
-    $('.form-control').submit(function() {
-      console.log('form control')
     })
   },
 

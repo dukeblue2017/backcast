@@ -84,6 +84,10 @@ body {
   padding-left: 20px;
 }
 
+.form {
+  display: inherit;
+}
+
 h5 {
   border: 2px solid red;
   text-align: center;
