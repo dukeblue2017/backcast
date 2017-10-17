@@ -3,6 +3,7 @@ var AppView = Backbone.View.extend({
   el: '#app',
 
   initialize: function() {
+    this.video = new Video(window.exampleVideoData[0]);
     this.videos = new Videos(window.exampleVideoData);
     this.render();
 
@@ -15,7 +16,7 @@ var AppView = Backbone.View.extend({
     this.$el.html(this.template());
 
     new VideoListView({collection: this.videos});
-    new VideoPlayerView();
+    new VideoPlayerView({model: this.video});
     new SearchView();
 
     return this;

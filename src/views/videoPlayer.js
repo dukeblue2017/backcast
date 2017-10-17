@@ -6,7 +6,8 @@ var VideoPlayerView = Backbone.View.extend({
 
 
   render: function() {
-    this.$el.html(this.template());
+  console.log("Inside Video player", this);
+    this.$el.html(this.template(this.model.attributes));
     return this;
   },
 
