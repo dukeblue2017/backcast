@@ -3,10 +3,11 @@ var SearchView = Backbone.View.extend({
 
   initialize: function() {
     this.render();
-    $('.btn').click( function( event ) {
-      event.preventDefault();
-      var text = $('.form-control').val();
-      this.collection.search(text)
+    $('.search-bar').on('submit', function( event ) {
+      // event.preventDefault();
+      // var text = $('.form-control').val();
+      console.log("Text:");
+      // this.collection.search(text)
     }, this)
 
   },
